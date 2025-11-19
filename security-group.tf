@@ -1,4 +1,4 @@
-resource "aws_security_group" "allow_tls" {
+resource "aws_security_group" "jenber_sec-groups" {
   name        = "jenber_allow_rules"
   description = "Allow TLS inbound traffic and all outbound traffic"
   vpc_id      = data.aws_vpc.jenber_existing_vpc.id 
@@ -25,12 +25,12 @@ resource "aws_vpc_security_group_ingress_rule" "allow_tls_ipv4" {
 resource "aws_vpc_security_group_ingress_rule" "allow_tls_ipv4_http" {
   security_group_id = aws_security_group.jenber_sec-groups.id
   cidr_ipv4         = "0.0.0.0/0"
-  from_port         = 88
+  from_port         = 80
   ip_protocol       = "tcp"
-  to_port           = 88
+  to_port           = 80
 }
 
-data "aws_vpc" "jenber_existing_vpc" {
-    id = "vpc-07eede624774fec02"                    #already existed vpc in my aws account 
+# data "aws_vpc" "jenber_existing_vpc" {
+#     id = "vpc-07eede624774fec02"                    #already existed vpc in my aws account you can define that on data.tf
   
-}
+# }
