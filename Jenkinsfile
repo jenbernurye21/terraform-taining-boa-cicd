@@ -25,7 +25,7 @@ pipeline {
             }   
             steps {
                 echo "hello world new data"
-            git url: 'https://github.com/jenbernurye21/terraform-taining-boa-cicd.git', branch: 'dev'
+            git url: 'https://github.com/jenbernurye21/terraform-taining-boa-cicd.git', branch: 'dev'  // dev for now 
                 sh 'terraform init'
                 sh 'terraform plan'
             }
