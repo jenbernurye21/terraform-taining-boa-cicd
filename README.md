@@ -5,8 +5,8 @@
 # verify terraform 
      ## terraform version 
 # running terraform code 
-## terraform init 
-## terraform plan 
-## terraform apply --auto-approve 
+     ## terraform init 
+     ## terraform plan 
+     ## terraform apply --auto-approve 
 # checking state 
 # terraform state list
